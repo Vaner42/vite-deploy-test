@@ -1,18 +1,31 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
+import * as ww from '@wecom/jssdk'
+
+const count = ref(0)
 
 defineProps({
   msg: String,
 })
 
-const count = ref(0)
+ww.getContext({
+  success: function (res) {
+    console.log(res, 'res')
+  },
+})
+console.log(ww, 'ww')
+
+
+function handleCount() {
+  count.value++
+}
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
 
   <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
+    <button type="button" @click="handleCount">count is {{ count }}</button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test HMR
