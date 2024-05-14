@@ -1,5 +1,8 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import * as ww from '@wecom/jssdk'
+
+console.log(ww, 'ww')
 </script>
 
 <template>
