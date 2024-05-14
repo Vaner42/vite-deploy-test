@@ -1,5 +1,10 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue';
+import * as ww from '@wecom/jssdk'
+
+ww.register({
+  corpId: 'wwb713c50dd6334a76'
+})
 </script>
 
 <template>
