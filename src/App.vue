@@ -23,6 +23,9 @@ ww.register({
   corpId: 'ww2c71c4018757ffac',
   getConfigSignature() {
     const timestamp = new Date().getTime()
+    console.log(location.href, 'location.href')
+    console.log(timestamp, 'timestamp')
+    console.log(generateNonceStr(), 'generateNonceStr')
     return {
       url: location.href,
       timestamp,
