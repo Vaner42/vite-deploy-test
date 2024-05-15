@@ -19,21 +19,22 @@ import {
 //   }
 // })
 
-// ww.register({
-//   corpId: 'ww2c71c4018757ffac',
-//   getConfigSignature() {
-//     const timestamp = new Date().getTime()
-//     console.log(location.href, 'location.href')
-//     console.log(timestamp, 'timestamp')
-//     console.log(generateNonceStr(), 'generateNonceStr')
-//     return {
-//       url: location.href,
-//       timestamp: 1715758020228,
-//       nonceStr: 'emub70irngo',
-//       signature: '16f30b5874b629946a141a9fefd337de59e7d86a',
-//     }
-//   },
-// })
+ww.register({
+  corpId: 'ww2c71c4018757ffac',
+  getConfigSignature() {
+    const timestamp = new Date().getTime()
+    console.log(location.href, 'location.href')
+    console.log(timestamp, 'timestamp')
+    console.log(generateNonceStr(), 'generateNonceStr')
+    return {
+      // url: location.href,
+      url: 'auth.nexttao.com',
+      timestamp: 1715758020228,
+      nonceStr: 'emub70irngo',
+      signature: '91a76b1aebd67eb44fd6b385f71732ee318c84a9',
+    }
+  },
+})
 console.log(1111)
 
 function generateNonceStr() {
