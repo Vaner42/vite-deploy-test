@@ -36,17 +36,17 @@ export class landRelevant {     // 模块二
 
 export const getAccessToken = (params) => {
   console.log(params, 'access-params')
-  return request(`https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=${params.corpId}&corpsecret=${params.secret}`, {}, 'get')
+  return request(`/api/cgi-bin/gettoken?corpid=${params.corpId}&corpsecret=${params.secret}`, {}, 'get')
 }
 
 export const getCorpTicket = (params) => {
   console.log(params, 'ticket-params')
 
-  return request(`https://qyapi.weixin.qq.com/cgi-bin/get_jsapi_ticket?access_token=${params.access_token}`, params, 'get')
+  return request(`/api/cgi-bin/get_jsapi_ticket?access_token=${params.access_token}`, params, 'get')
 }
 
 export const getAppTicket = (params) => {
   console.log(params, 'ticket-params')
 
-  return request(`https://qyapi.weixin.qq.com/cgi-bin/ticket/get?access_token=${params.access_token}&type=agent_config`, params, 'get')
+  return request(`/api/cgi-bin/ticket/get?access_token=${params.access_token}&type=agent_config`, params, 'get')
 }

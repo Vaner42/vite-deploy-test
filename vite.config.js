@@ -7,5 +7,14 @@ export default defineConfig({
   base: './',
   build: {
     outDir: 'docs'
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://qyapi.weixin.qq.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
   }
 })
