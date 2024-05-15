@@ -6,18 +6,18 @@ import {
   getAccessToken,
 } from './api/api'
 
-getAccessToken({
-  corpId: 'ww2c71c4018757ffac',
-  secret:
-    'e88ySHW0g1eGLlcP3yY0Q8-hAGBcl5KbsO9xQCb4mK0',
-}).then((res) => {
-  if (res) {
-    const { access_token } = res
-    getCorpTicket({
-      access_token,
-    })
-  }
-})
+// getAccessToken({
+//   corpId: 'ww2c71c4018757ffac',
+//   secret:
+//     'e88ySHW0g1eGLlcP3yY0Q8-hAGBcl5KbsO9xQCb4mK0',
+// }).then((res) => {
+//   if (res) {
+//     const { access_token } = res
+//     getCorpTicket({
+//       access_token,
+//     })
+//   }
+// })
 
 ww.register({
   corpId: 'ww2c71c4018757ffac',
@@ -31,6 +31,7 @@ ww.register({
     }
   },
 })
+console.log(1111)
 
 function generateNonceStr() {
   return Math.random().toString(36).substr(2, 15)
