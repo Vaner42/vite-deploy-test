@@ -28,9 +28,9 @@ ww.register({
     console.log(generateNonceStr(), 'generateNonceStr')
     return {
       url: location.href,
-      timestamp,
-      nonceStr: generateNonceStr(),
-      signature: '78392246610ab28696be498772f9933036506be3',
+      timestamp: 1715758020228,
+      nonceStr: 'emub70irngo',
+      signature: '16f30b5874b629946a141a9fefd337de59e7d86a',
     }
   },
 })
